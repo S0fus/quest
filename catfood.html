@@ -30,6 +30,7 @@
       function verifyHandler(xmlHttp)
       {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+          document.getElementById("result").innerHTML = ""
           window.location.replace(xmlHttp.responseText);
         }
         else

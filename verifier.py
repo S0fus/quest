@@ -50,10 +50,8 @@ def verify(quest_id):
     resp = make_response()
 
     if username is None:
-        username = "mock_username"
-        # # TODO: send cookies in js
-        # username = "".join([random.choice(string.ascii_letters) for _ in range(32)])
-        # resp.set_cookie('username', username)
+        username = "".join([random.choice(string.ascii_letters) for _ in range(32)])
+        resp.set_cookie('username', username)
 
     quest_try = quests_try[quest_id]
     if username not in quest_try:

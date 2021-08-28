@@ -15,33 +15,12 @@
     <section class="u-align-center u-clearfix u-image u-section-1" data-image-width="1980" data-image-height="1100">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <p class=" u-custom-font u-font-raleway u-text u-text-1" align="center">
-          <img class="u-preserve-proportions" src="sherlock.png" width="350">
+          <img class="u-preserve-proportions" src="sherlock.png" width="300">
+        </p>
+        <p class=" u-custom-font u-font-raleway u-text u-text-1" align="center">
+          <img class="u-preserve-proportions" src="kot2.gif" width="300">
         </p>
       </div>
     </section>
-    <script>
-      function verifyHandler(xmlHttp)
-      {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-          window.location.replace(xmlHttp.responseText);
-        }
-        else
-        {
-          document.getElementById("result").innerHTML = xmlHttp.responseText;
-          console.log('err', xmlHttp.responseText)
-        }
-      }
-      function verifyKey()
-      {
-        var xmlHttp = new XMLHttpRequest();
-        var key = document.getElementById("inputKey").value;
-        xmlHttp.onreadystatechange = function () {
-        verifyHandler(xmlHttp) }
-        // const url='http://localhost:5000/6/?key=' + key;
-        const url='https://devholo.me/flask/6/?key=' + key;
-        xmlHttp.open("GET", url, true);
-        xmlHttp.send();
-      }
-    </script>
   </body>
 </html>
